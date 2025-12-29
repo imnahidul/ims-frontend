@@ -26,7 +26,7 @@
 //  const fetchProducts = async () =>{
     
 //     try{
-//   const response = await axios.get("http://localhost:5000/api/products",{
+//   const response = await axios.get("http://90.90.91.34:5000/api/products",{
 //     headers: {
 //       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
 //     },
@@ -84,7 +84,7 @@
 //   if(confirmDelete) {
 //   //if(window.confirm("Are You Sure want To Delete This supplier ?")) {
 //  try {
-//    const response = await axios.delete(`http://localhost:5000/api/products/${id}`,
+//    const response = await axios.delete(`http://90.90.91.34:5000/api/products/${id}`,
            
 //              {
 //             headers: {
@@ -128,7 +128,7 @@
 //       if(editProduct){
 //      try {
 //         const response = await axios.put(
-//             `http://localhost:5000/api/products/${editProduct}`,
+//             `http://90.90.91.34:5000/api/products/${editProduct}`,
 //             formData,
 //             {
 //                 headers: {
@@ -168,7 +168,7 @@
 
 //      try {
 //         const response = await axios.post(
-//             "http://localhost:5000/api/products/add",
+//             "http://90.90.91.34:5000/api/products/add",
 //             formData,
 //             {
 //                 headers: {
@@ -489,7 +489,7 @@ const Products = () => {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/products", {
+      const response = await axios.get("http://90.90.91.34:5000/api/products", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("pos-token")}`,
         },
@@ -543,7 +543,7 @@ const Products = () => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 
     try {
-      const response = await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      const response = await axios.delete(`http://90.90.91.34:5000/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("pos-token")}`,
         },
@@ -579,7 +579,7 @@ const Products = () => {
     try {
       if (editProduct) {
         const response = await axios.put(
-          `http://localhost:5000/api/products/${editProduct}`,
+          `http://90.90.91.34:5000/api/products/${editProduct}`,
           formData,
           {
             headers: {
@@ -596,7 +596,7 @@ const Products = () => {
         }
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/products/add",
+          "http://90.90.91.34:5000/api/products/add",
           formData,
           {
             headers: {

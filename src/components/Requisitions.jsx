@@ -76,7 +76,7 @@
 //   const fetchRequisitions = async () => {
 //     setLoading(true);
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/requisition", {
+//       const res = await axios.get("http://90.90.91.34:5000/api/requisition", {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       setRequisitions(res.data.requisitions || []);
@@ -225,11 +225,11 @@
 
 //     try {
 //       if (editId) {
-//         await axios.put(`http://localhost:5000/api/requisition/${editId}`, payload, {
+//         await axios.put(`http://90.90.91.34:5000/api/requisition/${editId}`, payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       } else {
-//         await axios.post("http://localhost:5000/api/requisition/add", payload, {
+//         await axios.post("http://90.90.91.34:5000/api/requisition/add", payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       }
@@ -246,7 +246,7 @@
 //   const handleDelete = async (id) => {
 //     if (!confirm("Delete this requisition permanently?")) return;
 //     try {
-//       await axios.delete(`http://localhost:5000/api/requisition/${id}`, {
+//       await axios.delete(`http://90.90.91.34:5000/api/requisition/${id}`, {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       fetchRequisitions();
@@ -781,7 +781,7 @@ const Requisitions = () => {
   const fetchRequisitions = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/requisition", {
+      const res = await axios.get("http://90.90.91.34:5000/api/requisition", {
         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
       });
       setRequisitions(res.data.requisitions || []);
@@ -931,11 +931,11 @@ const Requisitions = () => {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/requisition/${editId}`, payload, {
+        await axios.put(`http://90.90.91.34:5000/api/requisition/${editId}`, payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
         });
       } else {
-        await axios.post("http://localhost:5000/api/requisition/add", payload, {
+        await axios.post("http://90.90.91.34:5000/api/requisition/add", payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
         });
       }
@@ -951,7 +951,7 @@ const Requisitions = () => {
   const handleDelete = async (id) => {
     if (!confirm("Delete permanently?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/requisition/${id}`, {
+      await axios.delete(`http://90.90.91.34:5000/api/requisition/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
       });
       fetchRequisitions();

@@ -58,7 +58,7 @@
 //   const fetchInvoices = async () => {
 //     setLoading(true);
 // try{
-//   const response = await axios.get("http://localhost:5000/api/invoice",{
+//   const response = await axios.get("http://90.90.91.34:5000/api/invoice",{
 //     headers: {
 //       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
 //     },
@@ -118,7 +118,7 @@
 // if(editInvoice){
 //      try {
 //         const response = await axios.put(
-//             `http://localhost:5000/api/invoice/${editInvoice}`,
+//             `http://90.90.91.34:5000/api/invoice/${editInvoice}`,
 //             formData,
 //             {
 //                 headers: {
@@ -157,7 +157,7 @@
 
 //      try {
 //         const response = await axios.post(
-//             "http://localhost:5000/api/invoice/add",
+//             "http://90.90.91.34:5000/api/invoice/add",
 //             formData,
 //             {
 //                 headers: {
@@ -201,7 +201,7 @@
 //   if(confirmDelete) {
 //   //if(window.confirm("Are You Sure want To Delete This Invoice ?")) {
 //  try {
-//    const response = await axios.delete(`http://localhost:5000/api/invoice/${id}`,
+//    const response = await axios.delete(`http://90.90.91.34:5000/api/invoice/${id}`,
            
 //              {
 //             headers: {
@@ -548,7 +548,7 @@ const Invoices = () => {
   const fetchInvoices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/invoice", {
+      const response = await axios.get("http://90.90.91.34:5000/api/invoice", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("pos-token")}`,
         },
@@ -629,8 +629,8 @@ const Invoices = () => {
     e.preventDefault();
     try {
       const url = editInvoice
-        ? `http://localhost:5000/api/invoice/${editInvoice}`
-        : "http://localhost:5000/api/invoice/add";
+        ? `http://90.90.91.34:5000/api/invoice/${editInvoice}`
+        : "http://90.90.91.34:5000/api/invoice/add";
       const method = editInvoice ? "put" : "post";
 
       const response = await axios[method](url, formData, {
@@ -657,7 +657,7 @@ const Invoices = () => {
     if (!window.confirm("Are you sure you want to delete this invoice?")) return;
 
     try {
-      const response = await axios.delete(`http://localhost:5000/api/invoice/${id}`, {
+      const response = await axios.delete(`http://90.90.91.34:5000/api/invoice/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("pos-token")}`,
         },

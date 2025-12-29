@@ -16,7 +16,7 @@
 //   const fetchCategories = async () => {
 //     setLoading(true);
 // try{
-//   const response = await axios.get("http://localhost:5000/api/category",{
+//   const response = await axios.get("http://90.90.91.34:5000/api/category",{
 //     headers: {
 //       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
 //     },
@@ -40,8 +40,8 @@
        
         
 
-//             // const response = await axios.post("http://localhost:5000/api/category/add",
-//             const response = await axios.put(`http://localhost:5000/api/category/${editCategory}`,
+//             // const response = await axios.post("http://90.90.91.34:5000/api/category/add",
+//             const response = await axios.put(`http://90.90.91.34:5000/api/category/${editCategory}`,
 //            {categoryName,categoryDescription},
 //             {
 //             headers: {
@@ -65,7 +65,7 @@
 //                    }
 
 //                     }else{
-//                        const response = await axios.post("http://localhost:5000/api/category/add",
+//                        const response = await axios.post("http://90.90.91.34:5000/api/category/add",
 //            {categoryName,categoryDescription},
 //             {
 //             headers: {
@@ -99,7 +99,7 @@
 //   if(confirmDelete) {
 //   //if(window.confirm("Are You Sure want To Delete This category ?")) {
 //  try {
-//    const response = await axios.delete(`http://localhost:5000/api/category/${id}`,
+//    const response = await axios.delete(`http://90.90.91.34:5000/api/category/${id}`,
            
 //              {
 //             headers: {
@@ -257,7 +257,7 @@ const Categories = () => {
   const fetchCategories = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/category", {
+      const response = await axios.get("http://90.90.91.34:5000/api/category", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("pos-token")}`,
         },
@@ -281,7 +281,7 @@ const Categories = () => {
     try {
       if (editCategory) {
         const response = await axios.put(
-          `http://localhost:5000/api/category/${editCategory}`,
+          `http://90.90.91.34:5000/api/category/${editCategory}`,
           { categoryName, categoryDescription },
           {
             headers: {
@@ -301,7 +301,7 @@ const Categories = () => {
         }
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/category/add",
+          "http://90.90.91.34:5000/api/category/add",
           { categoryName, categoryDescription },
           {
             headers: {
@@ -334,7 +334,7 @@ const Categories = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/category/${id}`,
+        `http://90.90.91.34:5000/api/category/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("pos-token")}`,

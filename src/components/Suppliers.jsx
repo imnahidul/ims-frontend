@@ -29,7 +29,7 @@ const handleChange = (e) =>{
   const fetchSuppliers = async () => {
     setLoading(true);
 try{
-  const response = await axios.get("http://localhost:5000/api/supplier",{
+  const response = await axios.get("http://90.90.91.34:5000/api/supplier",{
     headers: {
       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
     },
@@ -79,7 +79,7 @@ const handleSubmit = async (e) => {
     if(editSupplier){
      try {
         const response = await axios.put(
-            `http://localhost:5000/api/supplier/${editSupplier}`,
+            `http://90.90.91.34:5000/api/supplier/${editSupplier}`,
             formData,
             {
                 headers: {
@@ -116,7 +116,7 @@ const handleSubmit = async (e) => {
 
      try {
         const response = await axios.post(
-            "http://localhost:5000/api/supplier/add",
+            "http://90.90.91.34:5000/api/supplier/add",
             formData,
             {
                 headers: {
@@ -153,7 +153,7 @@ const handleSubmit = async (e) => {
   if(confirmDelete) {
   //if(window.confirm("Are You Sure want To Delete This supplier ?")) {
  try {
-   const response = await axios.delete(`http://localhost:5000/api/supplier/${id}`,
+   const response = await axios.delete(`http://90.90.91.34:5000/api/supplier/${id}`,
            
              {
             headers: {
@@ -379,7 +379,7 @@ export default Suppliers
 //   const fetchSuppliers = async () => {
 //     setLoading(true);
 //     try {
-//       const response = await axios.get("http://localhost:5000/api/supplier", {
+//       const response = await axios.get("http://90.90.91.34:5000/api/supplier", {
 //         headers: {
 //           Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
 //         },
@@ -426,7 +426,7 @@ export default Suppliers
 //     if (editSupplier) {
 //       try {
 //         const response = await axios.put(
-//           `http://localhost:5000/api/supplier/${editSupplier}`,
+//           `http://90.90.91.34:5000/api/supplier/${editSupplier}`,
 //           formData,
 //           {
 //             headers: {
@@ -454,7 +454,7 @@ export default Suppliers
 //     } else {
 //       try {
 //         const response = await axios.post(
-//           "http://localhost:5000/api/supplier/add",
+//           "http://90.90.91.34:5000/api/supplier/add",
 //           formData,
 //           {
 //             headers: {
@@ -490,7 +490,7 @@ export default Suppliers
 
 //     try {
 //       const response = await axios.delete(
-//         `http://localhost:5000/api/supplier/${id}`,
+//         `http://90.90.91.34:5000/api/supplier/${id}`,
 //         {
 //           headers: {
 //             Authorization: `Bearer ${localStorage.getItem("pos-token")}`,

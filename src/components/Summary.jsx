@@ -17,7 +17,7 @@ const Summary = () => {
     const fetchDashboardData = async () => {
        try{
          setLoading(true);
-         const response = await axios.get("http://localhost:5000/api/dashboard",{
+         const response = await axios.get("http://90.90.91.34:5000/api/dashboard",{
         headers: {
        Authorization: `Bearer ${localStorage.getItem('pos-token')}`,
        }
