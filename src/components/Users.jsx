@@ -20,7 +20,7 @@ const [loading, setLoading] = useState(false);
   const fetchUsers = async () => {
     setLoading(true);
 try{
-  const response = await axios.get("http://localhost:3000/api/users",{
+  const response = await axios.get("http://localhost:5000/api/users",{
     headers: {
       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
     },
@@ -54,8 +54,8 @@ const handleSubmit = async (e) =>{
        
         
 
-        //     // const response = await axios.post("http://localhost:3000/api/category/add",
-        //     const response = await axios.put(`http://localhost:3000/api/category/${editCategory}`,
+        //     // const response = await axios.post("http://localhost:5000/api/category/add",
+        //     const response = await axios.put(`http://localhost:5000/api/category/${editCategory}`,
         //    {categoryName,categoryDescription},
         //     {
         //     headers: {
@@ -79,7 +79,7 @@ const handleSubmit = async (e) =>{
                 //    }
 
                 //     }else{
-          const response = await axios.post("http://localhost:3000/api/users/add",
+          const response = await axios.post("http://localhost:5000/api/users/add",
            formData,
             {
             headers: {
@@ -116,7 +116,7 @@ const handleSubmit = async (e) =>{
   
   if(confirmDelete) {
  try {
-   const response = await axios.delete(`http://localhost:3000/api/users/${id}`,
+   const response = await axios.delete(`http://localhost:5000/api/users/${id}`,
            
              {
             headers: {

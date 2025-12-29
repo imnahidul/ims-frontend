@@ -103,7 +103,7 @@
 //   const fetchEstimates = async () => {
 //     setLoading(true);
 //     try {
-//       const res = await axios.get("http://localhost:3000/api/estimate", {
+//       const res = await axios.get("http://localhost:5000/api/estimate", {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       setEstimates(res.data.estimates || []);
@@ -258,11 +258,11 @@
 
 //     try {
 //       if (editId) {
-//         await axios.put(`http://localhost:3000/api/estimate/${editId}`, payload, {
+//         await axios.put(`http://localhost:5000/api/estimate/${editId}`, payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       } else {
-//         await axios.post("http://localhost:3000/api/estimate/add", payload, {
+//         await axios.post("http://localhost:5000/api/estimate/add", payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       }
@@ -281,7 +281,7 @@
 //   const handleDelete = async (id) => {
 //     if (!window?.confirm || !window.confirm("Delete this estimate permanently?")) return;
 //     try {
-//       await axios.delete(`http://localhost:3000/api/estimate/${id}`, {
+//       await axios.delete(`http://localhost:5000/api/estimate/${id}`, {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       await fetchEstimates();
@@ -837,7 +837,7 @@
 //   const fetchEstimates = async () => {
 //     setLoading(true);
 //     try {
-//       const res = await axios.get("http://localhost:3000/api/estimate", {
+//       const res = await axios.get("http://localhost:5000/api/estimate", {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       setEstimates(res.data.estimates || []);
@@ -995,11 +995,11 @@
 
 //     try {
 //       if (editId) {
-//         await axios.put(`http://localhost:3000/api/estimate/${editId}`, payload, {
+//         await axios.put(`http://localhost:5000/api/estimate/${editId}`, payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       } else {
-//         await axios.post("http://localhost:3000/api/estimate/add", payload, {
+//         await axios.post("http://localhost:5000/api/estimate/add", payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       }
@@ -1018,7 +1018,7 @@
 //   const handleDelete = async (id) => {
 //     if (!window?.confirm || !window.confirm("Delete this estimate permanently?")) return;
 //     try {
-//       await axios.delete(`http://localhost:3000/api/estimate/${id}`, {
+//       await axios.delete(`http://localhost:5000/api/estimate/${id}`, {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       await fetchEstimates();
@@ -1603,7 +1603,7 @@
 //   const fetchEstimates = async () => {
 //     setLoading(true);
 //     try {
-//       const res = await axios.get("http://localhost:3000/api/estimate", {
+//       const res = await axios.get("http://localhost:5000/api/estimate", {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       setEstimates(res.data.estimates || []);
@@ -1743,11 +1743,11 @@
 
 //     try {
 //       if (editId) {
-//         await axios.put(`http://localhost:3000/api/estimate/${editId}`, payload, {
+//         await axios.put(`http://localhost:5000/api/estimate/${editId}`, payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       } else {
-//         await axios.post("http://localhost:3000/api/estimate/add", payload, {
+//         await axios.post("http://localhost:5000/api/estimate/add", payload, {
 //           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //         });
 //       }
@@ -1764,7 +1764,7 @@
 //   const handleDelete = async (id) => {
 //     if (!window.confirm("Delete this estimate permanently?")) return;
 //     try {
-//       await axios.delete(`http://localhost:3000/api/estimate/${id}`, {
+//       await axios.delete(`http://localhost:5000/api/estimate/${id}`, {
 //         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
 //       });
 //       await fetchEstimates();
@@ -2281,7 +2281,7 @@ const Estimates = () => {
   const fetchEstimates = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/api/estimate", {
+      const res = await axios.get("http://localhost:5000/api/estimate", {
         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
       });
       setEstimates(res.data.estimates || []);
@@ -2439,11 +2439,11 @@ const Estimates = () => {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:3000/api/estimate/${editId}`, payload, {
+        await axios.put(`http://localhost:5000/api/estimate/${editId}`, payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
         });
       } else {
-        await axios.post("http://localhost:3000/api/estimate/add", payload, {
+        await axios.post("http://localhost:5000/api/estimate/add", payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
         });
       }
@@ -2462,7 +2462,7 @@ const Estimates = () => {
   const handleDelete = async (id) => {
     if (!window?.confirm || !window.confirm("Delete this estimate permanently?")) return;
     try {
-      await axios.delete(`http://localhost:3000/api/estimate/${id}`, {
+      await axios.delete(`http://localhost:5000/api/estimate/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("pos-token")}` },
       });
       await fetchEstimates();

@@ -26,7 +26,7 @@ const menuItems = [
  const customerItems = [
     //{name: "Dashboard", path:"/customer/dashboard", icon: <FaHome />, isParent:true},
     {name: "Products", path:"/customer/dashboard/products", icon: <FaBox />, isParent:false},
-    {name: "Categories", path:"/customer/dashboard/categories", icon: <FaTable />, isParent:false},
+    // {name: "Categories", path:"/customer/dashboard/categories", icon: <FaTable />, isParent:false},
     {name: "Orders", path:"/customer/dashboard/orders", icon: <FaShoppingCart />, isParent:false},
     {name: "Profile", path:"/customer/dashboard/profile", icon: <FaCog />, isParent:false},
     {name: "Logout", path:"/customer/dashboard/logout", icon: <FaSignOutAlt />, isParent:false},

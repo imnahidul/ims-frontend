@@ -21,7 +21,7 @@ const CustomerProducts = () => {
   const fetchProducts = async () => {
     
     try{
-  const response = await axios.get("http://localhost:3000/api/products",{
+  const response = await axios.get("http://localhost:5000/api/products",{
     headers: {
       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
     },
@@ -77,7 +77,7 @@ const CustomerProducts = () => {
   const handleSubmit = async (e) => {
       e.preventDefault();
       try{
-        const response = await axios.post("http://localhost:3000/api/orders/add",orderData,{
+        const response = await axios.post("http://localhost:5000/api/orders/add",orderData,{
     headers: {
       Authorization: `Bearer ${localStorage.getItem('pos-token')} `,
     },
@@ -254,3 +254,6 @@ const CustomerProducts = () => {
 }
 
 export default CustomerProducts;
+
+///////////add ppaginations after 10 products/////////////////
+

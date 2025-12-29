@@ -103,10 +103,10 @@ element={<Profile />}
   element={<CustomerProducts />}>
   </Route>
   
- <Route
+ {/* <Route
  path='categories'
  element={<Categories />}
- />
+ /> */}
 
    <Route
  path='orders'
