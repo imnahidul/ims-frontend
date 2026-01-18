@@ -87,6 +87,7 @@ const CustomerProducts = () => {
    setOrderData({ productId:"", quantity:1,  total:0, stock:0, price:0
     });
     alert("Order added Successfully");
+    fetchProducts(); // <--- THIS IS THE FIX reload issue
        }
       } catch (error){
          console.error("Error adding product:",error);
@@ -363,6 +364,7 @@ export default CustomerProducts;
 //       );
 //       if (response.data.success) {
 //         alert("Order added successfully!");
+//        fetchProducts(); // <--- THIS IS THE FIX reload issue
 //         closeModal();
 //       }
 //     } catch (error) {
