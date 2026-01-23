@@ -489,7 +489,7 @@ const Categories = () => {
                 Prev
               </button>
 
-              {[...Array(totalPages)].map((_, i) => (
+              {/* {[...Array(totalPages)].map((_, i) => (
                 <button
                   key={i}
                   onClick={() => handlePageChange(i + 1)}
@@ -499,7 +499,35 @@ const Categories = () => {
                 >
                   {i + 1}
                 </button>
-              ))}
+              ))} */}
+              
+ {/* add pagination  22-01-26 start */}
+{Array.from({ length: totalPages }, (_, i) => i + 1)
+  .filter((page) => {
+    // This logic picks: First page, Last page, and 1 page around Current
+    return (
+      page === 1 || 
+      page === totalPages || 
+      Math.abs(page - currentPage) <= 1
+    );
+  })
+  .map((page, index, array) => (
+    <React.Fragment key={page}>
+      {/* This adds the "..." if there is a gap between numbers */}
+      {index > 0 && page - array[index - 1] > 1 && (
+        <span className="px-2 font-bold text-gray-500">...</span>
+      )}
+      <button
+        onClick={() => handlePageChange(page)}
+        className={`px-3 py-1 border rounded ${
+          currentPage === page ? "bg-blue-600 text-white" : "hover:bg-gray-100"
+        }`}
+      >
+        {page}
+      </button>
+    </React.Fragment>
+  ))}
+  {/* add pagination  22-01-26 start end */}   
 
               <button
                 className="px-3 py-1 border rounded disabled:opacity-50"
