@@ -1,6 +1,6 @@
 //import React from "react"
 //import {FaBox, FaCog, FaHome, FaShoppingCart, FaSignOutAlt, FaTable, FaTruck,  FaUsers } from "react-icons/fa"
-import { FaHome, FaTable, FaBox, FaTruck,FaFileInvoice,FaBriefcase, FaShoppingCart, FaUsers, FaCog,FaSignOutAlt, FaClipboard } from "react-icons/fa"
+import { FaHome, FaTable, FaBox, FaTruck,FaFileInvoice,FaBriefcase, FaShoppingCart, FaUsers, FaCog,FaSignOutAlt, FaClipboard ,FaTrash } from "react-icons/fa"
 import { NavLink } from "react-router"
 import { useAuth } from "../context/AuthContext";
 import React, {useEffect, useState } from "react";
@@ -13,6 +13,7 @@ const menuItems = [
     {name: "Categories", path:"/admin/dashboard/categories", icon: <FaTable />, isParent:false},
     {name: "Products", path:"/admin/dashboard/products", icon: <FaBox />, isParent:false},
     {name: "Suppliers", path:"/admin/dashboard/suppliers", icon: <FaTruck />, isParent:false},
+     {name: "Faulty", path:"/admin/dashboard/faultys", icon: <FaTrash />, isParent:false},
     {name: "Invoices", path:"/admin/dashboard/invoices", icon: <FaFileInvoice />, isParent:false},
     {name: "Estimates", path:"/admin/dashboard/estimates", icon: <FaBriefcase />, isParent:false},
     {name: "Requisitions", path:"/admin/dashboard/requisitions", icon: <FaClipboard />, isParent:false},

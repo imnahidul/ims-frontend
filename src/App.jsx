@@ -19,6 +19,9 @@ import Summary from './components/Summary'
 import Invoices from './components/Invoices'
 import Estimates from './components/Estimates'
 import Requisitions from './components/Requisitions'
+import Faultys from './components/Faultys'
+//import Faultys from './components/Faultys'
+
 
 function App() {
 
@@ -60,6 +63,11 @@ function App() {
  path='invoices'
  element={<Invoices />}
  //element={<h1>Invoices data  </h1>}
+ />
+   <Route
+ path='faultys'
+ element={<Faultys />}
+ //element={<h1>Faulty data  </h1>}
  />
  <Route
  path='estimates'

@@ -769,7 +769,7 @@ const Invoices = () => {
                 Prev
               </button>
 
-              {[...Array(totalPages)].map((_, i) => (
+              {/* {[...Array(totalPages)].map((_, i) => (
                 <button
                   key={i}
                   onClick={() => handlePageChange(i + 1)}
@@ -779,7 +779,31 @@ const Invoices = () => {
                 >
                   {i + 1}
                 </button>
-              ))}
+              ))} */}
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1)
+  .filter((page) => {
+    // Show first page, last page, and neighbors of current page
+    return page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1;
+  })
+  .map((page, index, array) => (
+    <React.Fragment key={page}>
+      {/* If there is a gap between this page and the previous one, show dots */}
+      {index > 0 && page - array[index - 1] > 1 && (
+        <span className="px-2 font-bold text-gray-500">...</span>
+      )}
+      <button
+        onClick={() => handlePageChange(page)}
+        className={`px-3 py-1 border rounded min-w-[35px] ${
+          currentPage === page
+            ? "bg-blue-600 text-white"
+            : "bg-white hover:bg-gray-100"
+        }`}
+      >
+        {page}
+      </button>
+    </React.Fragment>
+  ))}
 
               <button
                 className="px-3 py-1 border rounded disabled:opacity-50"

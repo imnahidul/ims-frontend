@@ -509,7 +509,7 @@ export default CustomerProducts;
 //               Prev
 //             </button>
 
-//             {[...Array(totalPages)].map((_, i) => (
+//             {/* {[...Array(totalPages)].map((_, i) => (
 //               <button
 //                 key={i}
 //                 onClick={() => handlePageChange(i + 1)}
@@ -521,7 +521,31 @@ export default CustomerProducts;
 //               >
 //                 {i + 1}
 //               </button>
-//             ))}
+//             ))} */}
+
+//             {Array.from({ length: totalPages }, (_, i) => i + 1)
+//   .filter((page) => {
+//     // Keeps first, last, and the neighbor pages of the current one
+//     return page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1;
+//   })
+//   .map((page, index, array) => (
+//     <React.Fragment key={page}>
+//       {/* Show dots if there is a gap between this page and the previous one */}
+//       {index > 0 && page - array[index - 1] > 1 && (
+//         <span className="px-2 font-bold text-gray-500">...</span>
+//       )}
+//       <button
+//         onClick={() => handlePageChange(page)}
+//         className={`px-4 py-2 border rounded min-w-[45px] ${
+//           currentPage === page
+//             ? "bg-blue-600 text-white"
+//             : "bg-white hover:bg-gray-100"
+//         }`}
+//       >
+//         {page}
+//       </button>
+//     </React.Fragment>
+//   ))}
 
 //             <button
 //               onClick={() => handlePageChange(currentPage + 1)}

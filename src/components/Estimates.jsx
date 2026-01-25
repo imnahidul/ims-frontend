@@ -2637,8 +2637,9 @@ const Estimates = () => {
                   {[
                     "No",
                     "Estimate No",
-                    "Company",
+                    //"Company",
                     "Client",
+                    "Company",
                     "Issue",
                     "Expiry",
                     "Total",
