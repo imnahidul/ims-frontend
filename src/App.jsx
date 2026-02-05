@@ -20,7 +20,9 @@ import Invoices from './components/Invoices'
 import Estimates from './components/Estimates'
 import Requisitions from './components/Requisitions'
 import Faultys from './components/Faultys'
+import GatePass from './components/GatePass'
 //import Faultys from './components/Faultys'
+
 
 
 function App() {
@@ -68,6 +70,11 @@ function App() {
  path='faultys'
  element={<Faultys />}
  //element={<h1>Faulty data  </h1>}
+ />
+    <Route
+ path='gatepass'
+ element={<GatePass />}
+//  element={<h1>GatePass data  </h1>}
  />
  <Route
  path='estimates'
